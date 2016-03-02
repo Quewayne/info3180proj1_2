@@ -6,7 +6,7 @@ Flask-SQLAlchemy
 psycopg2
 flask-wtf
 WTForms
-flask-bootstrap
+bootstrap
 flask-uploads
 datetime
 # ----------------------
