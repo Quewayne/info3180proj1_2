@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Profile{% endblock %}
+
+{% block page_content %}
+	
+    <div id="profile-pic">
+         <img src="{{user['image']}}" class="img-thumbnail" height="100" width="100">
+    </div>
+    <div class="container">
+  <h2>User Profile</h2>
+  <table padding-left= "100cm">
+    <thead>
+      <tr>
+        <th>{{user['fname']}} {{user['lname']}}</th>
+      </tr>
+      <tr>
+        <th>Profile Added on: {{datestring}}</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>User Name: {{user['uname']}}</td>
+      </tr>
+      <tr>
+        <td>ID: {{user['id']}}</td>
+      </tr>
+    <tr>
+        <td>Sex: {{user['sex']}}</td>
+      </tr>
+    <tr>
+        <td>Age: {{user['age']}}</td>
+      </tr>
+      <tr>
+        <td>Highest Score: {{user['hscore']}}</td>
+      </tr>
+      <tr>
+        <td>TDollars: {{user['tdoll']}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+{% endblock %}

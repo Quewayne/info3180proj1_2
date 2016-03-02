@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Profiles{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Profile Listing</h1>
+</div>
+<ul>
+  {% for user in users %}
+  <li><a href="/profile/{{user.uid}}">{{user.uid}} : {{user.uname}}</a></li>
+  <hr>
+  {% endfor %}
+</ul>
+
+{% endblock %}
+
