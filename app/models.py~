@@ -11,8 +11,9 @@ class Profile(db.Model):
     hscore=db.Column(db.Integer) 
     tdoll=db.Column(db.Integer)
     added=db.Column(db.DateTime)
+    uid=db.Column(db.String(20))
 
-    def __init__(self, fname, lname, age, sex,img,uname, added):
+    def __init__(self, fname, lname, age, sex,img,uname, added, uid):
        self.fname = fname
        self.lname = lname
        self.age = age
@@ -22,3 +23,6 @@ class Profile(db.Model):
        self.hscore = 0 
        self.tdoll = 0
        self.added = added
+       self.uid = uid
+       
+db.create_all();

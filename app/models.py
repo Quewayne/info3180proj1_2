@@ -24,3 +24,4 @@ class Profile(db.Model):
        self.tdoll = 0
        self.added = added
        self.uid = uid
+       
